@@ -3,7 +3,7 @@
  * Tag input search suggestion
  */
 
-app.directive('tagInput', function () {
+angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
         return {
             restrict: 'E',
             scope: {
