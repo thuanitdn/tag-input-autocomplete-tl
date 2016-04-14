@@ -17,7 +17,7 @@
     <label>Tag on change: {{ tagChange }}</label>
     <br />
     <div style="margin-left:250px">
-        <tag-in-au-tl placeholder='add a tag' taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+        <tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
     </div>
 
 </div>
@@ -31,7 +31,7 @@
     app.controller('FormCtrl', function ($scope) {
 
 
-        $scope.listtwo = ['one','two','three','four','five','fix','seven',];
+        $scope.listtwo = ['oneeeeeeeeeeeeeeeeeeeeeee','two','three','four','five','fix','seven',];
 
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);

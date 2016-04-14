@@ -63,25 +63,18 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                         if(index == $scope.selectedIndex) $scope.selectedValue=data;
                         return true;
                 };
-                
+
                 $scope.$watch('tagText', function (newVal, oldVal) {
-                    var tempEl;
                     if (!(newVal === oldVal && newVal === undefined)) {
-                        tempEl = $('<span>' + newVal + '</span>').appendTo('body');
-                        $scope.inputWidth = tempEl.width() + 5;
-                        if ($scope.inputWidth < $scope.defaultWidth) {
-                            $scope.inputWidth = $scope.defaultWidth;
-                        }
                         $scope.inputText=newVal;
                         if($scope.tagText != ''){
                             $scope.chopSetTagToView=true;
                         }
-
                         $scope.searchFilter = newVal;
-                        return tempEl.remove();
                     }
 
                 });
+
 
                 $('html').click(function() {
                     $scope.chopSetTagToView=false;
@@ -89,7 +82,7 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                 });
 
                 element.bind('keydown', function (e) {
-                    var l = angular.element(this).find('.list_autocomplete_child').length
+                    var l = element.find('.list_autocomplete_child').length;
                     var key;
                     key = e.which;
                     switch (key){

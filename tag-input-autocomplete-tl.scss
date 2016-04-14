@@ -60,6 +60,8 @@
     margin-top:5px;
     overflow: hidden;
     span{
+      margin-left:5px;
+      margin-top:2px;
       float: left;
       white-space: nowrap;
       max-width: 150px;
@@ -67,7 +69,7 @@
       text-overflow: ellipsis;
     }
     .delete-tag {
-      margin-top:8px;
+      margin-top:3px;
       float: right;
       cursor: pointer;
       color:#fff;
@@ -87,15 +89,18 @@
     background: #fff;
     max-height: 300px;
     overflow-y: auto;
+    overflow-x: hidden;
     box-shadow:1px 2px 11px 1px rgba(184, 192, 204, 0.9);
     list-style: none;
     border-radius: 5px;
     .active_autocomplete{
+      border: 1px solid #ccc;
       background:#f7f8fc;
     }
     .list_autocomplete_child{
       width:100%;
       height:45px;
+      line-height: 45px;
       cursor: pointer;
       &:hover{
         background: #f7f8fc;
