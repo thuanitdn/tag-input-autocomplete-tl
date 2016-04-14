@@ -16,7 +16,7 @@ Usage
 
 1.Add the ngTagsInput module as a dependency in your AngularJS app.
 
-2.Add the element <tag-in-au-t> to the HTML file where you want to use an input tag control and bind it to a property of your model. That property, if it exists, must be an array of objects and each object must have a property named text containing the tag text.
+2.Add the element <tag-in-au-t /> to the HTML file where you want to use.
 
 3.You're done!
 
