@@ -34,13 +34,12 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
 <div class="highlight highlight-text-html-basic"><pre>bower install taginautl --save</pre></div>
 
+<p>After then , we need to import tag-input-autocomplete-tl,jquery and angularjs.</p>
 
-
-
-
-
-
-<p></p>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/taginautl/jquery.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/taginautl/angular.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/taginautl/tag-input-autocomplete-tl.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>bower_components/taginautl/tag-input-autocomplete-tl.css<span class="pl-pds">"</span></span>&gt;</pre></div>
 
 <p>Usage</p>
 
@@ -50,7 +49,7 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
 <p>2.Add the element  to the HTML file where you want to use.</p>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listtwo<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listAutocomplete<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;</pre></div>
 
 <p>taglist : Pass an array to the autocomplete directive.</p>
 
@@ -84,11 +83,11 @@ Example: </p>
 &lt;<span class="pl-ent">div</span> <span class="pl-e">ng-controller</span>=<span class="pl-s"><span class="pl-pds">'</span>FormCtrl<span class="pl-pds">'</span></span>&gt;
     &lt;<span class="pl-ent">label</span>&gt;Your Input: {{ inputText }}&lt;/<span class="pl-ent">label</span>&gt;
     &lt;<span class="pl-ent">br</span> /&gt;
-    &lt;<span class="pl-ent">label</span>&gt;Your list tag:{{ listtwo }}&lt;/<span class="pl-ent">label</span>&gt;
+    &lt;<span class="pl-ent">label</span>&gt;Your list tag:{{ listAutocomplete }}&lt;/<span class="pl-ent">label</span>&gt;
     {{ tagChange }}
     &lt;<span class="pl-ent">br</span> /&gt;
     &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>margin-left:250px<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listtwo<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;
+        &lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listAutocomplete<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;
     &lt;/<span class="pl-ent">div</span>&gt;
 
 &lt;/<span class="pl-ent">div</span>&gt;
@@ -102,7 +101,7 @@ Example: </p>
 <span class="pl-s1">    <span class="pl-smi">app</span>.<span class="pl-en">controller</span>(<span class="pl-s"><span class="pl-pds">'</span>FormCtrl<span class="pl-pds">'</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">$scope</span>) {</span>
 <span class="pl-s1"></span>
 <span class="pl-s1"></span>
-<span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-smi">listtwo</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>oneeeeeeeeeeeeeeeeeeeeeeeeeeee<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>two<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>three<span class="pl-pds">'</span></span>];</span>
+<span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-smi">listAutocomplete</span> <span class="pl-k">=</span> [<span class="pl-s"><span class="pl-pds">'</span>oneeeeeeeeeeeeeeeeeeeeeeeeeeee<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>two<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>three<span class="pl-pds">'</span></span>];</span>
 <span class="pl-s1"></span>
 <span class="pl-s1">        <span class="pl-smi">$scope</span>.<span class="pl-en">$watch</span>(<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span>, <span class="pl-k">function</span> (<span class="pl-smi">newVal</span>,<span class="pl-smi">oldVal</span>) {</span>
 <span class="pl-s1">            <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">"</span>something is happening with input text:<span class="pl-pds">"</span></span><span class="pl-k">+</span>newVal);</span>
