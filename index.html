@@ -12,10 +12,12 @@
     <p><label>Your Input: {{ inputText }}</label></p>
     <p><label>Your list tag:{{ listAutocomplete }}</label></p>
     <p><label>Tag on change: {{ tagChange }}</label></p>
-    <p style="margin-left:250px">
-        <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+    <p style="margin-left:50px">
+        With no limit tag: <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
     </p>
-
+    <p style="margin-left:50px">
+        With limit tag = 3: <tag-in-au-tl taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
+    </p>
 </div>
 <script src="./jquery.min.js"></script>
 <script src="./angular.js"></script>
@@ -26,7 +28,7 @@
 <script>
     app.controller('FormCtrl', function ($scope) {
         $scope.listAutocomplete = ['one','two','three','four','five','fix','seven',"something is happening"];
-
+        $scope.listAutocomplete2 = ['one','two','three','four','five','fix','seven',"something is happening"];
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);
         })
@@ -34,6 +36,9 @@
         $scope.$watch("tagChange", function (newVal,oldVal) {
             console.log("something is happening with tag change:"+newVal);
         })
+
+
+
     });
 </script>
 </body>

@@ -9,7 +9,8 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
             scope: {
                 inputTags: '=taglist',
                 inputText:'=inputText',
-                listSetToView:'=tagOnChange'
+                listSetToView:'=tagOnChange',
+                limitSetTag:'=limitSetTag'
             },
             link: function ($scope, element) {
                 $scope.tagText = '';
@@ -45,7 +46,6 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                     }
                     return $scope.listSetToView = tagArray.join(',');
                 };
-                
 
                 $scope.setTagToView= function (data) {
                     var tagArray;
@@ -54,16 +54,29 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                     }
 
                     tagArray = $scope.tagArrayListSetView();
-
-                    if (tagArray.indexOf(data) == -1) {
-                        tagArray.push(data);
-                        $scope.listSetToView = tagArray.join(',');
-                        $scope.chopSetTagToView=false;
-                        $scope.tagText = ''
+                    if(angular.isUndefined($scope.limitSetTag)){
+                        if (tagArray.indexOf(data) == -1) {
+                            tagArray.push(data);
+                            $scope.listSetToView = tagArray.join(',');
+                            $scope.chopSetTagToView=false;
+                            $scope.tagText = ''
+                        }
+                        else{
+                            $scope.chopSetTagToView=false;
+                            $scope.tagText = ''
+                        }
                     }
-                    else{
-                        $scope.chopSetTagToView=false;
-                        $scope.tagText = ''
+                    else if($scope.limitSetTag >=1){
+                        if (tagArray.indexOf(data) == -1 && tagArray.length < $scope.limitSetTag) {
+                            tagArray.push(data);
+                            $scope.listSetToView = tagArray.join(',');
+                            $scope.chopSetTagToView=false;
+                            $scope.tagText = ''
+                        }
+                        else{
+                            $scope.chopSetTagToView=false;
+                            $scope.tagText = ''
+                        }
                     }
                 };
 
@@ -71,7 +84,7 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                         if(index == $scope.selectedIndex) $scope.selectedValue=data;
                         return true;
                 };
-
+                
                 $scope.$watch('tagText', function (newVal, oldVal) {
                     if (!(newVal === oldVal && newVal === undefined)) {
                         $scope.inputText=newVal;
@@ -84,6 +97,8 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                 });
 
 
+                
+                
                 $('html').click(function() {
                     $scope.chopSetTagToView=false;
                     $scope.$apply();

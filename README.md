@@ -41,6 +41,8 @@ input-text: What you typed in will be in this variable.
 
 tag-on-change : List variable chosen.
 
+limit-set-tag: limit display tag, should be >=1 
+
 Using $watching to listen change the input-text and tag-on-change.
 Example: 
 ```html

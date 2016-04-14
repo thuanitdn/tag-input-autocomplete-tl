@@ -82,6 +82,7 @@ $color_text:#54657e;
     }
   }
   .list_autocomplete{
+    z-index: 100;
     position: absolute;
     top:60px;
     width: 100%;

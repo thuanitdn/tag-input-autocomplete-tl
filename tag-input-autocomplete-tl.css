@@ -73,6 +73,7 @@
       .tag-input-tl .input-tag .delete-tag:hover {
         color: #fff; }
   .tag-input-tl .list_autocomplete {
+    z-index: 100;
     position: absolute;
     top: 60px;
     width: 100%;
