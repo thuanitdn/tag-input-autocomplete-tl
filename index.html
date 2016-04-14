@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html ng-app="app" lang="en-us">
   <head>
     <meta charset="UTF-8">
     <title>Tag-input-autocomplete-tl by thuanitdn</title>
@@ -8,27 +8,30 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+      <link rel="stylesheet" type="text/css" href="stylesheets/tag-input-autocomplete-tl.css" media="screen">
   </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Tag-input-autocomplete-tl</h1>
-      <h2 class="project-tagline">Tags input Autocomplete Search directive for AngularJS</h2>
-      <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl" class="btn">View on GitHub</a>
-      <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+  <body ng-controller="tlCtr">
 
-    <section class="main-content">
+   <section class="main-content">
       <h1>
 <a id="tag-input-autocomplete-tl" class="anchor" href="#tag-input-autocomplete-tl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>tag-input-autocomplete-tl</h1>
-
+       <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl">View on GitHub</a>
+       <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl/zipball/master">Download .zip</a>
+       <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl/tarball/master">Download .tar.gz</a>
 <p>Tags input Autocomplete Search directive for AngularJS
 Requirements</p>
 
 <p>AngularJS 1.4+
 A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
-<p>Demo: <a href="http://taginautl.herokuapp.com/">http://taginautl.herokuapp.com/</a></p>
+<h2>Demo:</h2>
+        <p>
+            With no limit tag</p>
+        <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+        <p>
+            With limit tag = 3
+        </p>
+        <tag-in-au-tl taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
 
 <p>Installing</p>
 
@@ -125,6 +128,9 @@ Example: </p>
 
     </section>
 
-  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/tag-input-autocomplete-tl.min.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
