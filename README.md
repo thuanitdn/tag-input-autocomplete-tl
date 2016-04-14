@@ -19,9 +19,35 @@ Usage
 
 1.Add the tagInAuTl module as a dependency in your AngularJS app.
 
+```html
+var app = angular.module('app', ["tagInAuTl"]);
+```
+
 2.Add the element <tag-in-au-t /> to the HTML file where you want to use.
 
+```html
+<tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+```
+taglist : Pass an array to the autocomplete directive.
+input-text: What you typed in will be in this variable.
+tag-on-change : List variable chosen.
+
+Using $watching to listen change the input-text and tag-on-change.
+Example: 
+```html
+ $scope.$watch("inputText", function (newVal,oldVal) {
+            console.log("something is happening with input text:"+newVal);
+        })
+
+        $scope.$watch("tagChange", function (newVal,oldVal) {
+            console.log("something is happening with tag change:"+newVal);
+        })
+```
+
 3.You're done!
+
+
+
 
 Example
 ```html
@@ -40,7 +66,7 @@ Example
     {{ tagChange }}
     <br />
     <div style="margin-left:250px">
-        <tag-in-au-tl placeholder='add a tag' taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+        <tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
     </div>
 
 </div>
