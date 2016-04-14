@@ -21,17 +21,15 @@
     </div>
 
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="./jquery.min.js"></script>
+<script src="./angular.js"></script>
 <script src="tag-input-autocomplete-tl.js"></script>
 <script>
     var app = angular.module("myApp", ["tagInAuTl"]);
 </script>
 <script>
     app.controller('FormCtrl', function ($scope) {
-
-
-        $scope.listtwo = ['oneeeeeeeeeeeeeeeeeeeeeee','two','three','four','five','fix','seven',];
+        $scope.listtwo = ['oneeeeeeeeeeeeeeeeeeeeeee','two','three','four','five','fix','seven'];
 
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);
