@@ -28,8 +28,9 @@ Requirements</p>
 <p>AngularJS 1.4+
 A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
-<p>Installing
-With bower : bower install taginautl --save</p>
+<p>Installing</p>
+
+<div class="highlight highlight-text-html-basic"><pre>bower install taginautl --save</pre></div>
 
 
 
@@ -43,7 +44,26 @@ With bower : bower install taginautl --save</p>
 
 <p>1.Add the tagInAuTl module as a dependency in your AngularJS app.</p>
 
+<div class="highlight highlight-text-html-basic"><pre>var app = angular.module('app', ["tagInAuTl"]);</pre></div>
+
 <p>2.Add the element  to the HTML file where you want to use.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listtwo<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;</pre></div>
+
+<p>taglist : Pass an array to the autocomplete directive.
+input-text: What you typed in will be in this variable.
+tag-on-change : List variable chosen.</p>
+
+<p>Using $watching to listen change the input-text and tag-on-change.
+Example: </p>
+
+<div class="highlight highlight-text-html-basic"><pre> $scope.$watch("inputText", function (newVal,oldVal) {
+            console.log("something is happening with input text:"+newVal);
+        })
+
+        $scope.$watch("tagChange", function (newVal,oldVal) {
+            console.log("something is happening with tag change:"+newVal);
+        })</pre></div>
 
 <p>3.You're done!</p>
 
@@ -64,7 +84,7 @@ With bower : bower install taginautl --save</p>
     {{ tagChange }}
     &lt;<span class="pl-ent">br</span> /&gt;
     &lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>margin-left:250px<span class="pl-pds">"</span></span>&gt;
-        &lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">placeholder</span>=<span class="pl-s"><span class="pl-pds">'</span>add a tag<span class="pl-pds">'</span></span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listtwo<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;
+        &lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listtwo<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;
     &lt;/<span class="pl-ent">div</span>&gt;
 
 &lt;/<span class="pl-ent">div</span>&gt;
