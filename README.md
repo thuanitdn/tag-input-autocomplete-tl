@@ -16,7 +16,7 @@ With Bower: bower install taginautl --save
 
 Usage
 
-1.Add the ngTagsInput module as a dependency in your AngularJS app.
+1.Add the tagInAuTl module as a dependency in your AngularJS app.
 
 2.Add the element <tag-in-au-t /> to the HTML file where you want to use.
 
