@@ -29,7 +29,9 @@ var app = angular.module('app', ["tagInAuTl"]);
 <tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
 ```
 taglist : Pass an array to the autocomplete directive.
+
 input-text: What you typed in will be in this variable.
+
 tag-on-change : List variable chosen.
 
 Using $watching to listen change the input-text and tag-on-change.
