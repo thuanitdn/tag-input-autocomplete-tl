@@ -33,7 +33,7 @@ var app = angular.module('app', ["tagInAuTl"]);
 2.Add the element <tag-in-au-t /> to the HTML file where you want to use.
 
 ```html
-<tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+<tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
 ```
 taglist : Pass an array to the autocomplete directive.
 
@@ -71,11 +71,11 @@ Example
 <div ng-controller='FormCtrl'>
     <label>Your Input: {{ inputText }}</label>
     <br />
-    <label>Your list tag:{{ listtwo }}</label>
+    <label>Your list tag:{{ listAutocomplete }}</label>
     {{ tagChange }}
     <br />
     <div style="margin-left:250px">
-        <tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+        <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
     </div>
 
 </div>
@@ -89,7 +89,7 @@ Example
     app.controller('FormCtrl', function ($scope) {
 
 
-        $scope.listtwo = ['oneeeeeeeeeeeeeeeeeeeeeeeeeeee','two','three'];
+        $scope.listAutocomplete = ['oneeeeeeeeeeeeeeeeeeeeeeeeeeee','two','three'];
 
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);

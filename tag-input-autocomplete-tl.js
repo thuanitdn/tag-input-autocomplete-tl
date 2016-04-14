@@ -52,11 +52,19 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                     if (data.length === 0) {
                         return;
                     }
+
                     tagArray = $scope.tagArrayListSetView();
-                    tagArray.push(data);
-                    $scope.listSetToView = tagArray.join(',');
-                    $scope.chopSetTagToView=false;
-                    $scope.tagText = ''
+
+                    if (tagArray.indexOf(data) == -1) {
+                        tagArray.push(data);
+                        $scope.listSetToView = tagArray.join(',');
+                        $scope.chopSetTagToView=false;
+                        $scope.tagText = ''
+                    }
+                    else{
+                        $scope.chopSetTagToView=false;
+                        $scope.tagText = ''
+                    }
                 };
 
                 $scope.setSeletedValue= function (index,data) {

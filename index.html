@@ -9,16 +9,12 @@
 <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl">Github</a>
 <h1>Tags input Autocomplete Search directive for AngularJS</h1>
 <div ng-controller='FormCtrl'>
-    <label>Your Input: {{ inputText }}</label>
-    <br />
-    <label>Your list tag:{{ listtwo }}</label>
-
-    <br />
-    <label>Tag on change: {{ tagChange }}</label>
-    <br />
-    <div style="margin-left:250px">
-        <tag-in-au-tl taglist='listtwo' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
-    </div>
+    <p><label>Your Input: {{ inputText }}</label></p>
+    <p><label>Your list tag:{{ listAutocomplete }}</label></p>
+    <p><label>Tag on change: {{ tagChange }}</label></p>
+    <p style="margin-left:250px">
+        <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
+    </p>
 
 </div>
 <script src="./jquery.min.js"></script>
@@ -29,7 +25,7 @@
 </script>
 <script>
     app.controller('FormCtrl', function ($scope) {
-        $scope.listtwo = ['oneeeeeeeeeeeeeeeeeeeeeee','two','three','four','five','fix','seven'];
+        $scope.listAutocomplete = ['one','two','three','four','five','fix','seven',"something is happening"];
 
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);
