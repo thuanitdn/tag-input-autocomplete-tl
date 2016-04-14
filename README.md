@@ -16,10 +16,10 @@ After then , we need to import tag-input-autocomplete-tl,jquery and angularjs.
 
 
 ```html
-<script src="bower_components/jquery.min.js"></script>
-<script src="bower_components/angular.js"></script>
-<script src="bower_components/tag-input-autocomplete-tl.js"></script>
-<link rel="stylesheet" href="bower_components/tag-input-autocomplete-tl.css">
+<script src="bower_components/taginautl/jquery.min.js"></script>
+<script src="bower_components/taginautl/angular.js"></script>
+<script src="bower_components/taginautl/tag-input-autocomplete-tl.js"></script>
+<link rel="stylesheet" href="bower_components/taginautl/tag-input-autocomplete-tl.css">
 ```
 
 Usage
