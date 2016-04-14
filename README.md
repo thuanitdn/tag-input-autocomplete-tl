@@ -89,7 +89,7 @@ Example
     app.controller('FormCtrl', function ($scope) {
 
 
-        $scope.listAutocomplete = ['oneeeeeeeeeeeeeeeeeeeeeeeeeeee','two','three'];
+        $scope.listAutocomplete = ['one','two','three','four','five','fix','seven',"something is happening"];
 
         $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);
