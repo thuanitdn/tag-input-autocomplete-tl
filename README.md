@@ -7,7 +7,7 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)
 
 Installing
 
-Bower: bower install taginautl --save
+With Bower: bower install taginautl --save
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
