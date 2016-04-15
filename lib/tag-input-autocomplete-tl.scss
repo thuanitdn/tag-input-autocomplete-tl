@@ -109,4 +109,53 @@ $color_text:#54657e;
 
     }
   }
+//animate
+  .animatedTag {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  @-webkit-keyframes flipInX {
+    0% {
+      -webkit-transform: perspective(400px) rotateX(90deg);
+      opacity: 0;
+    }
+    40% {
+      -webkit-transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+      -webkit-transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+      -webkit-transform: perspective(400px) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes flipInX {
+    0% {
+      transform: perspective(400px) rotateX(90deg);
+      opacity: 0;
+    }
+    40% {
+      transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+      transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+      transform: perspective(400px) rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  .flipInXTag {
+    -webkit-backface-visibility: visible !important;
+    -webkit-animation-name: flipInX;
+    backface-visibility: visible !important;
+    animation-name: flipInX;
+  }
 }
+
+
