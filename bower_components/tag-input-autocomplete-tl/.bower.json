@@ -1,0 +1,29 @@
+{
+  "name": "tag-input-autocomplete-tl",
+  "main": "tag-input-autocomplete-tl.js",
+  "version": "1.0.2",
+  "homepage": "https://github.com/thuanitdn/tag-input-autocomplete-tl",
+  "authors": [
+    "thuan le <thuan09694@hotmail.com>"
+  ],
+  "description": "tag input autocomplete",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "_release": "1.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.2",
+    "commit": "5b7e1ad8432bcff026944b2502d4b50d4d88e736"
+  },
+  "_source": "https://github.com/thuanitdn/tag-input-autocomplete-tl.git",
+  "_target": "^1.0.1",
+  "_originalSource": "taginautl"
+}

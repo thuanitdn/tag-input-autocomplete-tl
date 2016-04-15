@@ -1,0 +1,21 @@
+{
+  "name": "tag-input-autocomplete-tl",
+  "homepage": "https://github.com/thuanitdn/tag-input-autocomplete-tl",
+  "authors": [
+    "thuan <thuan09694@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "tag-input-autocomplete-tl": "taginautl#^1.0.1"
+  }
+}

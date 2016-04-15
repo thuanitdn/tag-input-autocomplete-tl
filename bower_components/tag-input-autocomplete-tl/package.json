@@ -1,0 +1,22 @@
+{
+  "name": "tag-input-autocomplete-tl",
+  "version": "1.0.1",
+  "description": "Tags input Autocomplete Search directive for AngularJS Requirements",
+  "main": "tag-input-autocomplete-tl.js",
+  "scripts": {
+    "start":"node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thuanitdn/tag-input-autocomplete-tl.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/thuanitdn/tag-input-autocomplete-tl/issues"
+  },
+  "dependencies": {
+    "express": "~4.13.4"
+  }
+}
