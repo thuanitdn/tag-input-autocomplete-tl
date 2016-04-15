@@ -42,16 +42,14 @@ angular.module('tagInAuTl', []).directive('tagInAuTl', function () {
                 var tagArray;
                 tagArray = $scope.tagArrayListSetView();
                 if (tagArray.length > 0 && $scope.tagText.length === 0) {
-                    tagArray.splice(0, 1);
+                    tagArray.splice(tagArray.length -1, 1);
                 }
                 return $scope.listSetToView = tagArray.join(',');
             };
 
             $scope.setTagToView = function (data) {
                 var tagArray;
-                if (data.length === 0) {
-                    return;
-                }
+                if (data.length === 0) return;
 
                 tagArray = $scope.tagArrayListSetView();
                 if (angular.isUndefined($scope.limitSetTag)) {
