@@ -11,16 +11,38 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bower_components/tag-input-autocomplete-tl/lib/tag-input-autocomplete-tl.css" media="screen">
       <style>
-
-          .customCssTag button{
+            .customCssTag .tag-input-tl{
+                border-color: #FF4136;
+            }
+            .customCssTag .tag-input-tl input{
+                color:#FF4136;
+            }
+            .customCssTag .tag-input-tl input::-webkit-input-placeholder {
+                color:    #FF4136;
+            }
+            .customCssTag .tag-input-tl input::-moz-placeholder {
+                color:    #FF4136;
+            }
+            .customCssTag .tag-input-tl input::-ms-input-placeholder {
+                color:    #FF4136;
+            }
+            .customCssTag .tag-input-tl .list_autocomplete{
+                background: #fff;
+                box-shadow: 1px 2px 11px 1px #FF4136;
+            }
+            .customCssTag .tag-input-tl .list_autocomplete .list_autocomplete_child{
+                border-color:#FF4136 ;
+                color:#FF4136;
+            }
+            .customCssTag .tag-input-tl button{
               display: none;
           }
-          .customCssTag .box_tag_right{
+          .customCssTag .tag-input-tl .box_tag_right{
               left:0;
               width: 100%;
               background: #fff;
           }
-          .customCssTag .box_tag_right .input-tag{
+          .customCssTag .tag-input-tl .box_tag_right .input-tag{
               background: #FF4136;
           }
       </style>
@@ -46,6 +68,7 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
         <p>
             With limit tag = 3 and custom theme
         </p>
+
         <tag-in-au-tl class="customCssTag" taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
 
 <h2>Installing</h2>
