@@ -35,13 +35,15 @@ var app = angular.module('app', ["tagInAuTl"]);
 ```html
 <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
 ```
-taglist : Pass an array to the autocomplete directive.
+`taglist` : Pass an array to the autocomplete directive.
 
-input-text: What you typed in will be in this variable.
+`input-text`: What you typed in will be in this variable.
 
-tag-on-change : List variable chosen.
+`tag-on-change` : List variable chosen.
 
-limit-set-tag: limit display tag, should be >=1 
+`limit-set-tag`: limit display tag, should be >=1.
+
+`class` : css class.
 
 Using $watching to listen change the input-text and tag-on-change.
 Example: 
@@ -58,53 +60,6 @@ Example:
 3.You're done!
 
 
-
-
-Example
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tag input autocomplete Thuanle</title>
-    <link rel="stylesheet" href="tag-input-autocomplete-tl.css">
-</head>
-<body ng-app="myApp">
-<div ng-controller='FormCtrl'>
-    <label>Your Input: {{ inputText }}</label>
-    <br />
-    <label>Your list tag:{{ listAutocomplete }}</label>
-    {{ tagChange }}
-    <br />
-    <div style="margin-left:250px">
-        <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
-    </div>
-
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-<script src="tag-input-autocomplete-tl.js"></script>
-<script>
-    var app = angular.module("myApp", ["tagInAuTl"]);
-</script>
-<script>
-    app.controller('FormCtrl', function ($scope) {
-
-
-        $scope.listAutocomplete = ['one','two','three','four','five','fix','seven',"something is happening"];
-
-        $scope.$watch("inputText", function (newVal,oldVal) {
-            console.log("something is happening with input text:"+newVal);
-        })
-
-        $scope.$watch("tagChange", function (newVal,oldVal) {
-            console.log("something is happening with tag change:"+newVal);
-        })
-    });
-</script>
-</body>
-</html>
-```
 
 LICENSE
 ```html
