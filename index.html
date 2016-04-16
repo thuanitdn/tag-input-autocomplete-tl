@@ -55,17 +55,19 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span> <span class="pl-e">taglist</span>=<span class="pl-s"><span class="pl-pds">'</span>listAutocomplete<span class="pl-pds">'</span></span> <span class="pl-e">input-text</span>=<span class="pl-s"><span class="pl-pds">"</span>inputText<span class="pl-pds">"</span></span> <span class="pl-e">tag-on-change</span>=<span class="pl-s"><span class="pl-pds">"</span>tagChange<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">tag</span><span class="pl-e">-in-au-tl</span>&gt;</pre></div>
 
-<p>taglist : Pass an array to the autocomplete directive.</p>
+<p><span class="hightlight_custom">taglist</span> Pass an array to the autocomplete directive.</p>
 
-<p>input-text: What you typed in will be in this variable.</p>
+<p><span class="hightlight_custom">input-text</span> What you typed in will be in this variable.</p>
 
-<p>tag-on-change : List variable chosen.</p>
+<p><span class="hightlight_custom">tag-on-change</span> List variable chosen.</p>
 
-<p>limit-set-tag: limit display tag, should be &gt;=1 </p>
+<p><span class="hightlight_custom">limit-set-tag</span> limit display tag, should be &gt;=1 </p>
+
+<p><span class="hightlight_custom">class</span> css class</p>
 
 <p>Using $watching to listen change the input-text and tag-on-change.
-Example: </p>
-
+ </p>
+<p>Example:</p>
 <div class="highlight highlight-text-html-basic"><pre> $scope.$watch("inputText", function (newVal,oldVal) {
             console.log("something is happening with input text:"+newVal);
         })
@@ -74,7 +76,16 @@ Example: </p>
             console.log("something is happening with tag change:"+newVal);
         })</pre></div>
 
-<p>3.You're done!</p>
+<p>Example:</p>
+<div class="highlight highlight-text-html-basic"><pre> $scope.$watch("inputText", function (newVal,oldVal) {
+    console.log("something is happening with input text:"+newVal);
+})
+
+$scope.$watch("tagChange", function (newVal,oldVal) {
+    console.log("something is happening with tag change:"+newVal);
+})</pre></div>
+
+       <p>3.You're done!</p>
 
 
 

@@ -243,3 +243,11 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+.hightlight_custom{
+  background: #f3f6fa;
+  color: #567482;
+  word-wrap:normal;
+  font:1rem Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  padding:10px;
+  border-radius:5px;
+}
