@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <title>Tag input autocomplete Thuanle</title>
     <link rel="stylesheet" href="./lib/tag-input-autocomplete-tl.css">
+    <style>
+
+        .customCssTag button{
+            display: none;
+        }
+        .customCssTag .box_tag_right{
+            left:0;
+            width: 100%;
+            background: #fff;
+        }
+        .customCssTag .box_tag_right .input-tag{
+            background: #FF4136;
+        }
+    </style>
 </head>
 <body ng-app="myApp">
 <a href="https://github.com/thuanitdn/tag-input-autocomplete-tl">Github</a>
@@ -16,7 +30,7 @@
         With no limit tag: <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
     </p>
     <p style="margin-left:50px">
-        With limit tag = 3: <tag-in-au-tl taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
+        With limit tag = 3 and custom theme: <tag-in-au-tl class="customCssTag" taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
     </p>
 </div>
 <script src="./jquery.min.js"></script>
