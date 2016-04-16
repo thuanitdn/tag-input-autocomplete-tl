@@ -10,6 +10,20 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bower_components/tag-input-autocomplete-tl/lib/tag-input-autocomplete-tl.css" media="screen">
+      <style>
+
+          .customCssTag button{
+              display: none;
+          }
+          .customCssTag .box_tag_right{
+              left:0;
+              width: 100%;
+              background: #fff;
+          }
+          .customCssTag .box_tag_right .input-tag{
+              background: #FF4136;
+          }
+      </style>
   </head>
   <body ng-controller="tlCtr">
 
@@ -30,9 +44,9 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
             With no limit tag</p>
         <tag-in-au-tl taglist='listAutocomplete' input-text="inputText" tag-on-change="tagChange"></tag-in-au-tl>
         <p>
-            With limit tag = 3
+            With limit tag = 3 and custom theme
         </p>
-        <tag-in-au-tl taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
+        <tag-in-au-tl class="customCssTag" taglist='listAutocomplete2' input-text="inputText2" tag-on-change="tagChange2" limit-set-tag="3"></tag-in-au-tl>
 
 <h2>Installing</h2>
 
@@ -63,7 +77,7 @@ A modern browser (Chrome 31+, Firefox 29+, Safari 7+, Opera 12+, IE 10+)</p>
 
 <p><span class="hightlight_custom">limit-set-tag</span> limit display tag, should be &gt;=1 </p>
 
-<p><span class="hightlight_custom">class</span> css class</p>
+<p><span class="hightlight_custom">class</span> css class, using to custom theme.</p>
 
 <p>Using $watching to listen change the input-text and tag-on-change.
  </p>
